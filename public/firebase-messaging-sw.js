@@ -2,15 +2,8 @@ importScripts('https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js');
 importScripts('https://www.gstatic.com/firebasejs/8.10.1/firebase-messaging.js');
 
 
-const firebaseConfig = {
-    apiKey: import.meta.env.VITE_FIREBASE_APIKEY,
-    authDomain: "pwa-react-deb88.firebaseapp.com",
-    projectId: "pwa-react-deb88",
-    storageBucket: "pwa-react-deb88.appspot.com",
-    messagingSenderId: "1001052109587",
-    appId: "1:1001052109587:web:9eb401e62c029500d938e6"
-};
-
+const firebaseConfig = {messagingSenderId: "MESSAGE SENDER ID"};
+firebase.initializeApp(firebaseConfig);
 const messaging = firebase.messaging();
 
 messaging.onBackgroundMessage((payload) => {
